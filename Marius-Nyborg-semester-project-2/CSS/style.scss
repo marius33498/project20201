@@ -1,0 +1,76 @@
+
+$primary-color: red !default;
+$accent-color: #FAE900 !default;
+$dark: red !important;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+/*nav and home-hero
+-------------------*/
+   nav{
+    background: $dark-theme;
+    color: $accent-color;
+    a{
+        color: $primary-color !important; 
+    }
+    .active{
+        color: $accent-color !important;
+    }
+   }
+.home-hero{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    padding: 10em 0;
+    height: 100%;
+    display: inline;
+}
+/*container
+_------------*/
+.container{
+    padding-top: 20px;
+    min-height: 100%;
+    width: 100%;
+}
+/* image
+------------*/
+img{
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    max-width: 300px;
+}
+.product-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   background-color: lightcoral;
+   padding: 15px;
+}
+/*footer
+----------------*/
+   footer{
+     background: blue;
+     position: relative;
+     margin-top: auto;
+   }
+
+   @media only screen and (max-width: 760px){
+       .product-container{
+           grid-template-columns: 1fr;
+           display: inline;
+           padding-top: 20px;
+           height: 100%;
+           margin: 0 auto;
+           width: 80%;
+       }
+     
+   }

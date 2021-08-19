@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+  text-align: center;
+}
+
+/*nav and home-hero
+-------------------*/
+nav {
+  background: #23415c;
+  color: #FAE900;
+}
+
+nav a {
+  color: #ffffff !important;
+}
+
+nav .active {
+  color: #FAE900 !important;
+}
+ul {
+  list-style-type: none;
+}
+.home-hero {
+ width: 100%;
+  height: 70vh;
+ background-size: cover;
+ background-position: center center;
+ position: relative;
+ overflow: hidden;
+}
+
+.hero-text{
+  text-align: center;
+  position: relative;
+}
+.hero-text-h1{
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 20px;
+}
+.hero-text-h3{
+  text-align: center;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text-button{
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: .5em 1.75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  border-style: solid;
+  font-weight: 600;
+}
+
+/*section
+-----------------*/
+section {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+.card{
+  width: 400px;
+}
+/*container
+_------------*/
+.container {
+  min-height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.container-fluid{
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+/* image
+------------*/
+img {
+  width: 500px;
+  height: 300px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#imageProduct{
+  margin: 0 auto;
+  display: block;
+}
+.product-container {
+  display: flex;
+  grid-template-columns: 1fr;
+  grid-column: auto;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+.product{
+   padding: 30px;
+    width: 600px;
+    margin: 0 auto;
+  text-align: left;
+  margin-right: -40px;
+}
+.image{
+  height: 100%;
+ 
+}
+.two{
+  margin-right: -70px;
+}
+
+.shoppingCart{
+	position: relative;
+	right: 10px;
+	margin-top: 0px;
+	display: inline-block;
+  margin: 0 auto;
+	height: 100%;
+	top: 20px;
+  width: 30%;
+  background-color: blue;
+  
+}
+/*footer
+----------------*/
+footer {
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  background: #23415c;
+}
+#footer-container{
+  background: #23415c;
+  color: #fff;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+}
+.footer-heading{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+.footer-email{
+  margin-bottom: 2rem;
+}
+.footer-heading h2{
+  margin-bottom: 2rem;
+}
+#footer-email{
+  width: 250px;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#footer-email::placeholder{
+  color: #b1b1b1;
+}
+
+#footer-email-btn{
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #f9423D;
+  color: #ffffff;
+  margin: 15px;
+}
+/*icons
+-----------*/
+.bi{
+  font-size: 30px;
+}
+@media only screen and (min-width: 900px){
+  body{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .home-hero{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  
+  body{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav{
+    color: gold;
+    
+  }
+
+  .home-hero{
+    width: 100%;
+    height: 40vh;
+  }
+  .hero-text-h1{
+    top: 20%;
+    font-size: 20px;
+  }
+  .hero-text-h3{
+    top: 35%;
+  }
+  .hero-text-button{
+    font-size: 15px;
+  }
+  .product-container {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 100%;
+    position:relative;
+
+  }
+#imageProduct{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .container-fluid{
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+  }
+  .container{
+      width: 100%;
+  }
+
+}
