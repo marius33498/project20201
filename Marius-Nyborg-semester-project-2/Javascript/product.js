@@ -38,8 +38,8 @@ getCats();
 
 
 
-const search = document.querySelector(".search");
+//const search = document.querySelector(".search");
 
-search.onkeyup = function (event){
+/*search.onkeyup = function (event){
     const searchValue = event.target.value.trim().toLowerCase();
-}
+}*/

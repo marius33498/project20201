@@ -13,6 +13,7 @@ body {
   padding: 0;
   max-width: 100%;
   text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 /*nav and home-hero
@@ -79,6 +80,16 @@ ul {
   font-weight: 600;
 }
 
+/* TITLE
+------------------*/
+#producth3{
+  padding: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+#pDescrition{
+  padding: 20px;
+}
 /*section
 -----------------*/
 section {
@@ -87,10 +98,26 @@ section {
   display: inline-block;
   overflow: hidden;
 }
-
+.search{
+  padding: 20px;
+  margin-top: 20px;
+}
 
 .card{
   width: 400px;
+}
+.col-sm-8{
+  background-color: #808080;
+  border-radius: 10px;
+}
+/*button
+--------------*/
+.product-button{
+  padding: 10px;
+  background-color: green;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
 }
 /*container
 _------------*/
@@ -125,15 +152,18 @@ img {
   grid-column: auto;
   margin: 0 auto;
   text-align: center;
-  
+  height: 100%;
 }
 .product{
    padding: 30px;
     width: 600px;
+    max-width: 100%;
+    max-height: 100%;
     margin: 0 auto;
   text-align: left;
   margin-right: -40px;
 }
+
 .image{
   height: 100%;
  
