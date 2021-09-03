@@ -1,10 +1,10 @@
 export function getExistingFavs(){
-    const favs = localStorage.getItem("favourites");
+    const shoes = localStorage.getItem("favourites");
 
-    if (favs === null){
+    if (shoes === null){
         return [];
     }else{
-        return JSON.parse(favs);
+        return JSON.parse(shoes);
     }
 
 }

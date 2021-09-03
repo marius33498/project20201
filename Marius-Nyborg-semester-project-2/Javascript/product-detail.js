@@ -6,45 +6,54 @@ const container = document.querySelector(".product-container");
 
 const favoruite = getExistingFavs();
 
-const buttons = document.querySelectorAll("button");
+
+let getApi = [];
 
 
-/*
-const cartList = document.querySelector(".cart-list");
-const cart = document.querySelector(".cart-body");
-*/
+
+//this line display the data
+function displayData(data) {
+  
+    container.innerHTML = '';
+
+  data.forEach(function (getApi) {
+    container.innerHTML += `<div class="product"><div class="row"><div class="col-sm-8"><h3>Title: ${getApi.title}</h3>
+          <img src="${getApi.image_url}" ><p>Price: ${getApi.price}</p> 
+          <button class="button" data-id="${getApi.id}"> Click here </button>
+         </div></div>
+          </div>`;
+  });
+  const buttons = document.querySelectorAll(".button");
 
 
-async function getProducts(){
-    try{ const response = await fetch(productsUrl);
-    const results = await response.json();
+buttons.forEach((button)=>{
    
-     container.innerHTML = "";
-
-     const facts = results;
-
-        facts.forEach(function(facts) {
-            container.innerHTML += `<div class="product"><div class="row"><div class="col-sm-8"><h3 id="producth3">Title: ${facts.title}</h3>
-            <img src="${facts.image_url}" alt="${facts.name}" class="w-100"><p id="pDescrition">${facts.description}</p><p>Price: ${facts.price}</p>  
-            <button class="product-button" data-product="${facts.id}">Add to cart</button>
-           </div></div> </div>`;
-         });
-        
-        const buttons = document.querySelectorAll(".product-button");
-        
-        buttons.forEach((button) => {
-            console.log(button);
-            button.addEventListener("click", handleClick);
-           
-        });
-     
-    
-   }catch (error) {
-    console.log(error);
+    button.addEventListener("click", handleClick);
+});
 }
-};
 
-getProducts();
+//this will get the data from my strapi
+async function getData() {
+  try {
+    const response = await fetch('http://localhost:1337/products');
+   
+    const results = await response.json();
+    const getApi = results;
+    
+    return getApi;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function init() {
+    getApi = await getData();
+  displayData(getApi);
+}
+
+init();
+//const cartList = document.querySelector(".cart-list");
+//const cart = document.querySelector(".cart-body");
 
 
 
@@ -54,5 +63,6 @@ function handleClick() {
     const id = this.dataset.id;
 
     favoruite.push(parseInt(id));
-    localStorage.setItem("button", JSON.stringify(favoruite));
+    localStorage.setItem("favoruites", JSON.stringify(favoruite));
 }
+
