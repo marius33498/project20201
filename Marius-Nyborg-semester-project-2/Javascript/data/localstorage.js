@@ -1,5 +1,5 @@
 export function getExistingFavs(){
-    const shoes = localStorage.getItem("favourites");
+    const shoes = localStorage.getItem("shoe");
 
     if (shoes === null){
         return [];
