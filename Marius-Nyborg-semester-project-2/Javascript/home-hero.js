@@ -1,4 +1,5 @@
 import { baseUrl } from "./api.js";
+import { getExistingFavs } from "../Javascript/data/localstorage.js";
 
 
 const hero = document.querySelector(".home-hero");
