@@ -1,5 +1,5 @@
 import { baseUrl } from "./api.js";
-import { getExistingFavs } from "./data/getFavs.js";
+import { getExistingFavs } from "./data/localstorage.js";
 
 const totalProducts = document.querySelector(".total b");
 
